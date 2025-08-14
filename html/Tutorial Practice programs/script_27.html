@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                var name=document.forms["RegForm"]["Name"].value;
+                var email=document.RegForm.Email.value;
+                var phone=document.RegForm.Telephone.value;
+                var subject=document.RegForm.Subject.value;
+                var password=document.RegForm.Password.value;
+                var address=document.RegForm.Address.value;
+                var regEmail=/^\w=([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})=$/g;//Javascript reGex for Email Vlidation.
+                var regPhone=/^\d{10}$/;//Javascript reGex for Phone Number validation.
+                var regName=/\d+$/g;//Javascript raGex for Nmae validation
+                if(name==""||regName.test(name)){
+                    window.alert("Please enter your name properly.");
+                    document.RegForm.Name.focus();
+                    return false;
+                }
+                if(address==""){
+                    window.alert("Please enter your adress.");
+                    document.RegForm.Address.focus();
+                    return false;
+
+                }
+                if(email==""|| !regEmail.test(email)){
+                    window.alert("Please enter a valid e-mail address.");
+                    document.RegForm.Email.focus();
+                    return false;
+                }
+                if(password==""){
+                    alert("Password should be atleast 6 charchter long");
+                    document.RegForm.Password.focus();
+                    return false;
+                }
+                if(phone==""||!regPhone.test(phone)){
+                    alert("Please enter valid phone number.");
+                    document.RegForm.Phone.focus();
+                    return false;
+                }
+                if(Subject.selctedIndex==-1){
+                    alert("Please enter your course.");
+                    document.RegForm.Subject.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h1 style="text-align:center;">REGENERTAION FORM</h1>
+        <form name="RegForm" onsubmit="return validateForm()" method="post" action="www.google.com">
+            <p>Name: <input type="text" size="20" name="Name"/> <br> <br>
+                Address: <input type="text" size="20" name="Address"/> <br><br>
+                E-mail Address: <input type="text" size="20" name="EMail"/> <br><br>
+                Password: <input type="password" size="20" name="Password"/> <br><br>
+                Telephone: <input type="text" size="20" name="Telephone"/> <br><br>
+            </p><br>
+            <p>
+                SELECT YOUR COURSE
+                <select name="Subject">
+                    <option value="-1">--SELECT--</option>
+                    <option value="1">BTECH</option>
+                    <option value="2">BBA</option>
+                    <option value="3">BCA</option>
+                    <option value="4">B>COM</option>
+                    <option value="5">MCA</option>
+                </select>
+            </p><br>
+            <p>
+                Comments: <textarea name="Comment" cols="25"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Submit" name="Submit" />
+                <input type="reset" value="Reset" name="Reset" />
+            </p>
+        </form>
+    </body>
+</html>

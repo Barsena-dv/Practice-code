@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Email Validation</title>
+        <script language="JavaScript">
+            function Validation()
+            {
+                var data=document.info.email.value;
+                if(data=="")
+                {
+                    alert("Please FIll Email Address");
+                    doucument.info.email.focus();
+                    return false;
+                }
+                
+                else
+                {
+                    var i=data.indexOf('@');
+                    var j=data.indexOf(".");
+                    var diff=paselent(j) - paselent(i);
+                    var k=parsent(j)+1;
+                    var c=data.charAt(k);
+                    if(i<1 || diff<=1 || c=="")
+                    {
+                        alert("Invalid email address");
+                        return false;
+                    }
+                    else
+                    {
+                        alert("Valid email address");
+                    }
+                    
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="info" method="post" action="" onsubmit="return Validation()">
+            <p>Email Address;
+               <input type="text" name="email"> 
+            </p>
+            <p>
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
+            </p>
+        </form>
+    </body>
+</html>

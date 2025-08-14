@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Feedback</title>
+        <script language="JavaScript">
+            function checkDetails()
+            {
+                var to,cc,message;
+                to=document.Compose.to.value;
+                cc=document.Compose.cc.value;
+                message=document.Compose.message.value;
+                if(to=="")
+                {
+                    alert("Please enter email address of receiver");
+                    document.Compose.to.focus();
+                    return false;
+                }
+                else if(cc="")
+                {
+                    alert("Please enter address of receiver");
+                    document.Compose.cc.focus();
+                    return false;
+                }
+                else if(message=="");
+                {
+                    alert("Please enter your message");
+                    document.Compose.message.focus;
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+</html>

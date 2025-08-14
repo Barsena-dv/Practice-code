@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Shopket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2874f0;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        .products {
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    Enrollment No.- 221260116002
+    <hr>
+    <header>
+        <div class="logo">Shopket</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button>Search</button>
+        </div>
+    </header>
+    <main>
+        <section class="products">
+            <h2>Featured iPhones</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="/html/AWP/Practical-1/Product1.html"><img src="/html/AWP/Practical-1/Images/Patek_Phillipe_Nautilu.webp" alt="Product 1"></a>
+                    <h3>Patek Phillipe Nautilus
+                        5711/1P-010 Platinum 40.5mm
+                    </h3>
+                    <p>Price:₹5,41,33,837.00 + Taxes</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <a href="/html/AWP/Practical-1/Product2.html"><img src="/html/AWP/Practical-1/Images/Ricahrd_Mille.webp" alt="Product 2"></a>
+                    <h3>Richard Mille 
+                        2018 RM 030 42mm unisex Titanium/Rubber
+                    </h3>
+                    <p>Price:₹2,91,95,924.40 + Taxes</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <a href="/html/AWP/Practical-1/Product3.html"><img src="/html/AWP/Practical-1/Images/Audemars_Piguet_Royal_Oak.webp" alt="Product 3"></a>
+                    <h3>Audemars Piguet
+                        Royal Oak 26065IS.OO.11051IS
+                    </h3>
+                    <p>Price:₹5,81,83,688.04 + Taxes</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <a href="/html/AWP/Practical-1/Product4.html"><img src="/html/AWP/Practical-1/Images/J&C.webp" alt="Product 4"></a>
+                    <h3>Jacob&Co
+                        Astronomia Art India
+                        AT102.40.AA.UB.A
+                    </h3>
+                    <p>Price:₹8,01,00,000 + Taxes</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <a href="/html/AWP/Practical-1/Product5.html"><img src="/html/AWP/Practical-1/Images/Vacheron_Constantin.webp" alt="Product 4"></a>
+                    <h3>Vacheron Constantin
+                        4600E/000A-B442
+                    </h3>
+                    <p>Price:₹10,55,768.52 + Taxes</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <a href="/html/AWP/Practical-1/Product6.html"><img src="/html/AWP/Practical-1/Images/Rolex.webp" alt="Product 4"></a>
+                    <h3>Rolex
+                        116610LV Submariner Automatic Watch for Men</h3>
+                    <p>Price: ₹18,00,000+Taxes</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Shopket</p>
+    </footer>
+</body>
+</html>

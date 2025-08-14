@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title>
+        Registration form
+    </title>
+    <script language="JavaScript">
+        function checkValidation() {
+            var fname, lname, homeaddress, officeaddress, mobile, email;
+            fname = document.details.fname.value;
+            lname = document.details.lname.value;
+            homeaddress = document.details.homeaddress.value;
+            officeaddress = document.details.officeaddress.value;
+            mobile = document.details.mobile.value;
+            email = document.details.email.value;
+            if (fname == "") {
+                alert("Please enter enter firt name");
+                document.details.fname.focus();
+                return false;
+            }
+            else if (lname == "") {
+                alert("Please enter last name");
+                document.details.lname.focus();
+                return false;
+            }
+            else if (homeaddress == "") {
+                alert("Please enter home address");
+                document.details.homeaddress.focus();
+                return false;
+            }
+            else if (officeaddress == "") {
+                alert("Please enter oddice address");
+                document.details.officeaddress.focus();
+                return false;
+            }
+            else if (mobile == "") {
+                alert("Please enter moblie number");
+                document.details.mobile.focus();
+                return false; 
+            }
+            else if (email == "") {
+                alert("Please enter email address");
+                document.details.email.focus();
+                return false;
+            }
+            else {
+                Validation();
+                return false;
+            }
+            return true;
+        }
+        function Validation() {
+            data = document.details.email.value;
+            i = data.indexOf('@');
+            j = data.indexOf('.');
+            diff = parseInt(j) - parseInt(i);
+            k = parseInt(j) + 1;
+            c = data.charAt(k);
+            if (i < 1 || diff <= 1 || c == "") {
+                alert("Invalid email address");
+                document.detail.email.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="detail" method="post" action="" onsubmit="return checkValidation()">
+        <table width="70%" border="1" align="center">
+            <tr>
+                <td width="28%">First Name</td>
+                <td width="72%">
+                    <input type="text" name="fname">
+                </td>
+            </tr>
+            <tr>
+                <td width="28%">Last Name</td>
+                <td width="72%">
+                    <input type="text" name="lname">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Home Address</td>
+                <td>
+                    <textarea placeholder="enter your home address...." name="homeaddress" id="" cols="40"
+                        rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Office Address</td>
+                <td>
+                    <textarea placeholder="enter your office address...." name="officeaddress" id="" cols="40"
+                        rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="text" name="mobile"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div align="center">
+                        <input type="submit" name="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" name="clear" value="clear">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

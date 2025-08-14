@@ -1,0 +1,17 @@
+#include<iostream.h>
+using namespace std;
+int main()
+{
+    int count=0;
+    char c;
+    cout<<"Enter Any Text :";
+    cin.get(c);
+    while(c!='\n')
+    {
+        cout.put(c);
+        count++;
+        cin.get(c);
+    }
+    cout<<"\n Number of characters :"<<count<<"\n";
+    return 0;
+}

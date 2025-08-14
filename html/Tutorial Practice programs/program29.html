@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Program 29</title>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width-device-width,initial-scale=1">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                background-color: #666;
+                padding: 35px;
+                text-align: center;
+                font-size: 35px;
+                color: aliceblue;
+            }
+            nav{
+                float: left;
+                width: 30%;
+                height: 300px;/*only for demonstration.should be removed*/
+                background:#ccc;
+                padding:20px;
+            }/*style the list inside the menu*/
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            article{
+                float: left;
+                padding:20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 30px;/*only for demonstration,should be removed*/
+            }
+            section::after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            /*style the footer*/
+            footer{
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: aliceblue;
+            }
+            /* responsible layout makes the two coloumns/boxes stack on  top of each other insted of next to each other on small screens*/
+            @media(max-width:600px){
+                nav,article{
+                    width: 100%;
+                    height:auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>CSS Layout flaoat</h2>
+        <p>In this example, we have created a heater ,two coloumn/boxes and a foots stacks on top of eack other .</p>
+        <p>Resize the browser window to see the resposive effects (you will learn more about this in our next chapter .HTML resposive.)</p>
+        <header>
+            <h2>Cities</h2>
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">London</a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a href="#">Tokyo</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>London</h1>
+                <p>London is the capital city of england.It is the most popular city in the UK</p>
+            </article>
+        </section>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </body>
+</html>

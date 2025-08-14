@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jiyan Mansuri | Portfolio</title>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        margin: 30px auto;
+        max-width: 900px;
+        width: 95%;
+        transition: all 0.3s ease;
+      }
+
+      .header-section {
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        gap: 50px;
+
+        flex-direction: row-reverse;
+      }
+
+      .header-section img {
+        width: 200px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .header-content {
+        max-width: 70%;
+        margin-top: 30px;
+      }
+
+      .header-content h1 {
+        margin-top: 15px;
+        color: #2b2d42;
+        font-weight: 600;
+      }
+
+      .header-content h4 {
+        position: relative;
+        display: inline-block;
+        color: #6c63ff;
+      }
+
+      .typing-effect {
+        overflow: hidden;
+        border-right: 3px solid #6c63ff;
+        white-space: nowrap;
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+
+      .nav-tabs {
+        margin-top: 25px;
+        border-bottom: 2px solid #6c63ff;
+      }
+
+      .nav-tabs li a {
+        font-weight: 600;
+        color: #6c63ff;
+        transition: all 0.3s ease;
+      }
+
+      .nav-tabs li a:hover {
+        color: #fff !important;
+        background-color: #6c63ff !important;
+        border-radius: 5px;
+      }
+
+      .section {
+        padding: 20px;
+        animation: fadeSlide 0.8s ease-in-out;
+        color: #333;
+      }
+
+      /* Animations */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+
+        50% {
+          border-color: #6c63ff;
+        }
+      }
+
+      @keyframes fadeSlide {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-text {
+        animation: fadeSlide 1s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header-section">
+        <img
+          src="profile_pic.jpg"
+          alt="Profile Photo"
+          class="img-responsive img-circle"
+        />
+        <div class="header-content">
+          <h1 class="animate-text">Barsena Druv</h1>
+          <h4 class="typing-effect">Front-end Developer | Passionate Coder</h4>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <ul class="nav nav-tabs">
+        <li><a ng-href="#!/about">About</a></li>
+        <li><a ng-href="#!/education">Education</a></li>
+        <li><a ng-href="#!/projects">Projects</a></li>
+        <li><a ng-href="#!/contact">Contact</a></li>
+      </ul>
+
+      <div ng-view></div>
+    </div>
+
+    <!-- Inside your Angular config -->
+    <script>
+      var app = angular.module("portfolioApp", ["ngRoute"]);
+
+      app.config([
+        "$routeProvider",
+        "$locationProvider",
+        function ($routeProvider, $locationProvider) {
+          $locationProvider.hashPrefix("!");
+
+          $routeProvider
+            .when("/about", {
+              template: `<div class="section"><h2>About Me</h2>
+              <p>Hello! I'm <strong>Barsena Dhruv</strong>, an enthusiastic and passionate IT engineering student currently studying at <strong>SAL College</strong>. I love creating clean, responsive websites and exploring modern web technologies. I have experience with HTML, CSS, JavaScript, and frameworks like AngularJS and React. I'm also exploring backend development with Node.js and Express.js. Whether it's building cool projects or solving real-world problems with code, I'm always up for a challenge. My journey in tech is driven by curiosity and continuous learning, and I'm particularly interested in UI/UX design, AI tools, and smart automation.</p></div>`,
+            })
+            .when("/education", {
+              template: `<div class="section"><h2>Education</h2><p>Bachelor's in Information Technology from SAL College, Gujarat</p></div>`,
+            })
+            .when("/education", {
+                 template: `<div class="section">
+                    <h2>Education</h2>
+                    <p>I'm currently in my <strong>3rd year</strong>, pursuing a <strong>Bachelor's degree in Information Technology</strong> at <strong>SAL Engineering and Technical Institute</strong>, affiliated with Gujarat Technological University (GTU).</p>
+                     <p>Throughout my academic journey, I’ve been actively involved in building real-world projects, exploring new technologies, and continuously upgrading my skills in both frontend and backend development.</p>
+                    </div>`
+                        })
+
+            .when("/projects", {
+              template: `<div class="section"><h2>My Projects</h2>
+
+    <div>
+      <h3>🎓 College Management System</h3>
+      <p>Developed a web-based application to manage various aspects of a college, including student enrollment, attendance tracking, faculty management, and timetable scheduling. This system helps streamline academic and administrative tasks.</p>
+    </div>
+
+    <div>
+      <h3>🏠 Smart Home Automation</h3>
+      <p>Created a smart home system using IoT concepts, allowing users to control appliances such as lights and fans via mobile app or voice commands. It integrates sensors and microcontrollers for real-time automation and energy efficiency.</p>
+    </div>
+
+    <div>
+      <h3>💰 Expense Tracker</h3>
+      <p>Built a personal finance management tool that enables users to track income and expenses, categorize spending, and visualize their budget with charts. This app helps improve money management and financial awareness.</p>
+    </div>
+
+  </div>`,
+            })
+
+            .when("/contact", {
+              template: `<div class="section"><h2>Contact Me</h2>
+              <p>Email: barsenadhruv@example.com</p>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/barsenadhruv" target="_blank">linkedin.com/in/barsenadhruv</a></p>
+            </div>`,
+            })
+            .otherwise({ redirectTo: "/about" });
+        },
+      ]);
+    </script>
+  </body>
+</html>

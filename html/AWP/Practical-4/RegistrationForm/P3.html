@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="registrationApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="RF.css">
+</head>
+<body ng-controller="RegistrationController">
+    <div class="container">
+        Enrollment No:221260116002
+        <h2>Registration Form</h2>
+        <form name="regForm" ng-submit="submitForm()" novalidate>
+
+            <label>Enrollment Number:
+                <input type="text" name="enrollment" ng-model="user.enrollment" ng-pattern="/^\d+$/" required>
+            </label>
+            <span class="error" ng-show="regForm.enrollment.$touched && regForm.enrollment.$invalid">Only numbers allowed</span>
+
+            <label>Name:
+                <input type="text" name="name" ng-model="user.name" ng-pattern="/^[A-Za-z ]+$/" required>
+            </label>
+            <span class="error" ng-show="regForm.name.$touched && regForm.name.$invalid">Only letters allowed</span>
+
+            <label>Gender:</label>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="Male" ng-model="user.gender" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" ng-model="user.gender"> Female</label>
+            </div>
+            <span class="error" ng-show="regForm.gender.$touched && regForm.gender.$invalid">Required</span>
+
+            <label>Address:
+                <textarea name="address" ng-model="user.address" required></textarea>
+            </label>
+
+            <label>Date of Birth:
+                <input type="date" name="dob" ng-model="user.dob" required>
+            </label>
+
+            <div class="form-section">
+                <div class="form-container">
+                    <label>College:
+                        <select name="college" ng-model="user.college" ng-change="updateCourses()" required>
+                            <option value="">Select College</option>
+                            <option value="SETI">SETI</option>
+                            <option value="SALITER">SALITER</option>
+                            <option value="PHARMA">PHARMA</option>
+                            <option value="SCE">SCE</option>
+                        </select>
+                    </label>
+
+                    <label>Course:
+                        <select name="course" ng-model="user.course" required ng-disabled="!user.college">
+                            <option value="">Select Course</option>
+                            <option ng-repeat="course in availableCourses" value="{{course}}">{{course}}</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="preview-container">
+                    <p><strong>Selected College:</strong> <span>{{user.college || 'None'}}</span></p>
+                    <p><strong>Selected Course:</strong> <span>{{user.course || 'None'}}</span></p>
+                </div>
+            </div>
+
+            <label>Email:
+                <input type="email" name="email" ng-model="user.email" required>
+            </label>
+
+            <label>Mobile Number:
+                <input type="tel" name="mobile" ng-model="user.mobile" ng-pattern="/^\d{10}$/" required 
+                    minlength="10" maxlength="10">
+            </label>
+            <span class="error" ng-show="regForm.mobile.$touched && regForm.mobile.$error.pattern">
+                Enter a valid 10-digit mobile number
+            </span>
+            
+
+            <label>Password: 
+                <input type="password" name="password" ng-model="user.password" 
+                    ng-pattern="/^(?=.*[A-Z])(?=.*[\W_]).{8,12}$/" required>
+            </label>
+            <span class="error" 
+                ng-show="regForm.password.$touched && regForm.password.$invalid">
+                Password must be 8-12 characters long, contain at least one uppercase letter, and one special character.
+            </span>
+            
+            <label>Confirm Password: 
+                <input type="password" name="confirmPassword" ng-model="user.confirmPassword" compare-to="user.password" required>
+            </label>
+            <span class="error" ng-show="regForm.confirmPassword.$touched && regForm.confirmPassword.$error.compareTo">
+                Passwords do not match
+            </span>
+            
+
+            <button type="submit" ng-disabled="regForm.$invalid">Register</button>
+            <button type="button" ng-click="resetForm()" style="margin-top: 10px; background: #ff6b6b;">Reset</button>
+        </form>
+
+        <div class="registration-details" ng-show="submitted">
+            <h3>Registered Details</h3>
+            <p><strong>Enrollment Number:</strong> {{user.enrollment}}</p>
+            <p><strong>Name:</strong> {{user.name}}</p>
+            <p><strong>Gender:</strong> {{user.gender}}</p>
+            <p><strong>Address:</strong> {{user.address}}</p>
+            <p><strong>Date of Birth:</strong> {{user.dob}}</p>
+            <p><strong>College:</strong> {{user.college}}</p>
+            <p><strong>Course:</strong> {{user.course}}</p>
+            <p><strong>Email:</strong> {{user.email}}</p>
+            <p><strong>Mobile Number:</strong> {{user.mobile}}</p>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module('registrationApp', []);
+
+app.directive('compareTo', function () {
+    return {
+        require: 'ngModel',
+        scope: { otherModelValue: '=compareTo' },
+        link: function (scope, element, attributes, ngModel) {
+            ngModel.$validators.compareTo = function (modelValue) {
+                return modelValue === scope.otherModelValue;
+            };
+            scope.$watch('otherModelValue', function () { ngModel.$validate(); });
+        }
+    };
+});
+
+app.controller('RegistrationController', function ($scope) {
+    $scope.user = {};
+    $scope.submitted = false;
+    $scope.collegeCourses = { "SETI": ["IT", "ICT"], "SALITER": ["Mechanical"], "PHARMA": ["B.Pharm"], "SCE": ["Computer"] };
+
+    $scope.updateCourses = function () { 
+        $scope.availableCourses = $scope.collegeCourses[$scope.user.college] || []; 
+    };
+
+    $scope.submitForm = function () {
+        if ($scope.regForm.$valid) {
+            alert('Registration successful!');
+            $scope.submitted = true;
+        } else {
+            alert('Please correct the errors before submitting.');
+        }
+    };
+
+    $scope.resetForm = function () {
+        $scope.user = {};
+        $scope.submitted = false;
+        $scope.regForm.$setPristine();
+        $scope.regForm.$setUntouched();
+    };
+});
+    </script>
+</body>
+</html>

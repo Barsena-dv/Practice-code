@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Custom String Trim</title>
+</head>
+
+<body style="background-color: gray;">
+    <center>
+        <h2>Trim Function</h2>
+        <input type="text" id="inputString" placeholder="Enter a string with spaces">
+        <button onclick="trimString()">Trim</button>
+        <p id="trimmedResult"></p>
+    </center>
+    <script> function customTrim(inputString) {
+        }
+        function trimString() {
+            const inputElement = document.getElementById('inputString'); const trimmedResultElement
+                = document.getElementById('trimmedResult'); const inputString = inputElement.value;
+            const trimmedString = customTrim(inputString); trimmedResultElement.innerText
+                = trimmedString;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increasing Font Size</title>
+    <style>
+        #text {
+            color: blue;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">SAL Education Campus</h1>
+    <script>
+        let fontSize = 10;
+        const textElement = document.getElementById("text");
+        const increaseFontSize = setInterval(() => {
+            if (fontSize >= 50) {
+                clearInterval(increaseFontSize);
+            } else {
+                fontSize++;
+                textElement.style.fontSize = fontSize + "px";
+            }
+        }, 50);
+    </script>
+</body>
+</html>

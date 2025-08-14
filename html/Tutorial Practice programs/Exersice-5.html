@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <head>
+        <title>Exersice 5</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            :root{
+                --color: rgb(127, 219, 255);
+                --beccolor: salmon;
+            }
+            .box1{
+                border: 2px solid black;
+                position: sticky;
+                margin: 0px;
+                height: 100px;
+                background-color: aqua;
+            }
+            .box2{
+                border: 2px solid black;
+                background-color: bisque;
+                padding: 10px;
+                margin: 20px;
+                padding: 10px;
+                height: 1000px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            ul{
+                list-style-type: none;
+                display: flex;
+            }
+            li:first-child{
+                background-color: var(--color);
+                border: 2px solid rgb(127, 208, 255);
+                margin: 10px;
+                height: 475px;
+                width: 340px;
+            }
+            li:nth-child(2){
+                background-color: var(--beccolor);
+                border: 2px solid rgb(221, 111, 99);
+                margin: 10px;
+                height: 475px;
+                width: 340px;
+            }
+            .box3{
+                border: 2px hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .box5{
+                border: 2px solid black;
+                border-radius: 10px;
+                margin: 50px 20px;
+                padding: 20px;
+            }
+            p{
+                size: 20;
+                text-align: center;
+            }
+            img{
+                position: fixed;
+                width: 100px;
+                bottom: 20px;
+                right: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="box1"></div>
+        </header>
+        <div class="box2">
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="box5">
+            <p>Welcome to this sigma web Development Express.</p>
+        </div>
+        <footer>
+            <img src="/pictures/mortal_kombat_11_icon_by_kiramaru_kun_dd56zo2-fullview.png" alt="">
+        </footer>
+    </body>
+</html>

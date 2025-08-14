@@ -1,0 +1,12 @@
+body{
+    background-color: darkgrey;
+}
+h1{
+    color:aliceblue;
+    text-align: center;
+}
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: brown;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Automation</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        .device {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Smart Home Automation System</h1>
+    <div class="device">
+        <h3>Light</h3>
+        <button id="Light-btn" onclick="toggleDevice('Light')">Toggle Light</button>
+        <p>Status: <span id="Light-status">Loading...</span></p>
+    </div>
+    <div class="device">
+        <h3>AC</h3>
+        <button id="ac-btn" onclick="toggleDevice('ac')">Toggle AC</button>
+        <p>Status: <span id="fan-status">Loading...</span></p>
+    </div>
+    <div>
+        <h3>Fan</h3>
+        <button id="fan-btn" onclick="toggleDevice('fan')">Toggle Fan</button>
+        <p>Status: <span id="fan-status">Loading...</span></p>
+
+        <script>
+            function getStatus(device){
+                fetch(`/device/${device}`)
+                .then(response => respinse.json())
+                .then(data => {
+                    document.getElementsById(`${device}-status`).innerText = data[device] ? 'On' : 'Off';
+                })
+                .catch(error => console.error('Error factching status:',error));
+            }
+            function toggleDevice(device){
+                fetch('/device/${device}',{method: 'POST'})
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById(`${device}-status`).innerText = data[device] ? 'On' : 'Off';
+                })
+                .catch(error => console.error('Error toggling device:',error));
+            }
+            document.addEventListner('DOMContentLoaded', fuction(){
+                getStatus('Light');
+                getStutus('ac');
+                getStatus('fan');
+            });
+        </script>
+    </div>
+</body>
+</html>

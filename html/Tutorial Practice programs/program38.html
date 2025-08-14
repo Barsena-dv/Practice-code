@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Program 33</title>
+        <style>
+            p.{outline-color: red;}
+            p.dotted{
+                outline-style: dotted;
+                border: 2px solid black;
+                outline-offset: 5px;
+                outline-color: red;
+                outline-width: medium;
+                /* thin,medium,thick or in pixel*/
+            }
+            /*other styles are dasher,solid,double,etc similar to border styles*/
+            p.one{border-style: solid;border-width:5px 20px;
+            }
+            p.two{brder-style:dashed;
+                border-width: 25px 10px 4px 35px;
+            }
+            p.solid{border-style: dotted;}
+            p.double{border-style: double;
+                border-color: brown;
+            }
+            p.groove{border-style: groove;}
+            p.ridge{border-style: ridge;}
+            p.inset{border-style: inset;}
+            p.outset{border-style: outset;}
+            p.none{border-style: none;}
+            p.hidden{border-style: hidden;}
+            p.mix{outline: thick solid pink}
+        </style>
+    </head>
+    <body>
+        <p class="mix">
+            Outline differs from borders! unlike borders,the outline is drawn outside the element , border,and may overlap other content . also , the outline is Not a part of the elements dimenmsions ; the elements total width and height is not affected by the width if the outline. <br>
+            The outline offset property adds space between an outline and the edge /border of an element the space between and element and its ouline is transperent.
+        </p>
+        <h2>The outline style property</h2>
+        <p class="dotted">A dotted outline</p>
+        <p class="one">A one outline</p>
+        <p class="two">A two outline</p>
+        <p class="solid">A solid outline</p>
+        <p class="double">A double outline</p>
+        <p class="groove">A groove outline</p>
+        <p class="ridge">A ridge outline</p>
+        <p class="inset">A inset outline</p>
+        <p class="outset">A outset outline</p>
+        <p class="none">A none outline</p>
+        <p class="hidden">A hidden outline</p>
+        <p class="mix">A mix outline</p>
+    </body>
+</html>

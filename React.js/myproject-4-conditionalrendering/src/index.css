@@ -1,0 +1,16 @@
+
+.w-prompt{
+  font-size: 40px;
+  background-color: rgb(49, 219, 179);
+  border: solid 1px rgb(175 175 175);
+  padding: 5px;
+  border-radius: 10px;
+}
+.l-prompt{
+  color: aliceblue;
+  font-size: 40px;
+  background-color: rgb(226, 111, 17);
+  border: solid 1px rgb(175 175 175);
+  padding: 5px;
+  border-radius: 10px;
+}

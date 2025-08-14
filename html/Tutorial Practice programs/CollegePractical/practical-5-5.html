@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Validator</title>
+</head>
+<body>
+    <h2>IP Address Validator</h2>
+    <input type="text" id="ipInput" placeholder="Enter IP address" />
+    <button onclick="checkIP()">Check IP</button>
+    <p id="result"></p>
+    <script>
+        function isValidIP(value) {
+            // Regular expression for IPv4 address
+            const ipv4Pattern = /^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)$/;
+            const ipv6Pattern = /^(?:[a-fA-F0-9]{1,4}:){7}[a-fA-F0-9]{1,4}$/;
+            if (ipv4Pattern.test(value)) {
+                return "Valid IPv4 Address";
+            } else if (ipv6Pattern.test(value)) {
+                return "Valid IPv6 Address";
+            } else {
+                return "Invalid IP Address";
+            }
+        }
+
+        function checkIP() {
+            const ipInput = document.getElementById("ipInput").value;
+            const result = isValidIP(ipInput);
+
+            // Display the result on the page
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+
+</html>

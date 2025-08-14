@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Way Data Binding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="MyController">
+
+    <h1>One-Way Data Binding Example</h1>
+
+    <p>Message: {{ message }}</p>
+
+    <script>         var app = angular.module('myApp', []);
+        app.controller('MyController', function ($scope) {
+            $scope.message = "This is one-way data binding in AngularJS.";
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAL College Student Registration Form</title>
+    <script>
+        function validateForm() {
+            let isValid = true;
+            const firstName = document.getElementById('firstName').value;
+            if (firstName === '' || !/^[a-zA-Z\s]+$/.test(firstName)) {
+                alert('Please enter a valid first name (only letters and spaces allowed).');
+                isValid = false;
+            }
+            const middleName = document.getElementById('middleName').value;
+            if (middleName !== '' && !/^[a-zA-Z\s]+$/.test(middleName)) {
+                alert('Please enter a valid middle name (only letters and spaces allowed) or leave it empty.');
+                isValid = false;
+            }
+            const lastName = document.getElementById('lastName').value;
+            if (lastName === '' || !/^[a-zA-Z\s]+$/.test(lastName)) {
+                alert('Please enter a valid last name (only letters and spaces allowed).');
+                isValid = false;
+            }
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                isValid = false;
+            }
+            const phone = document.getElementById('phone').value;
+            if (!/^\d{10}$/.test(phone)) {
+                alert('Please enter a valid 10-digit phone number.');
+                isValid = false;
+            }
+            const address = document.getElementById('address').value;
+            if (address === '') {
+                alert('Please enter your address.');
+                isValid = false;
+            }
+            const birthdate = document.getElementById('birthdate').value;
+            if (birthdate === '') {
+                alert('Please enter your birthdate.');
+                isValid = false;
+            }
+            const birthDateObj = new Date(birthdate);
+            const age = calculateAge(birthDateObj);
+            if (age < 18) {
+                alert('You must be at least 18 years old.');
+                isValid = false;
+            }
+            const password = document.getElementById('password').value;
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                alert('Password must be at least 8 characters long, include one uppercase letter, one lowercase letter, one number, and one special character.');
+                isValid = false;
+            }
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                isValid = false;
+            }
+            const enrollment = document.getElementById('enrollment').value;
+            if (!/^[a-zA-Z0-9]+$/.test(enrollment)) {
+                alert('Please enter a valid alphanumeric enrollment number.');
+                isValid = false;
+            }
+            const college = document.getElementById('college').value;
+            if (college === '') {
+                alert('Please select your college.');
+                isValid = false;
+            }
+            const branch = document.getElementById('branch').value;
+            if (branch === '') {
+                alert('Please select your branch.');
+                isValid = false;
+            }
+            const year = document.getElementById('year').value;
+            if (year === '') {
+                alert('Please select your year.');
+                isValid = false;
+            }
+            const semester = document.getElementById('semester').value;
+            if (semester === '') {
+                alert('Please select your semester.');
+                isValid = false;
+            }
+            const termsCheckbox = document.getElementById('terms').checked;
+            if (!termsCheckbox) {
+                alert('Please accept the terms and conditions.');
+                isValid = false;
+            }
+            return isValid;
+        }
+        function calculateAge(birthdate) {
+            const today = new Date();
+            let age = today.getFullYear() - birthdate.getFullYear();
+            const m = today.getMonth() - birthdate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+        function updateYearAndSemester() {
+            const branch = document.getElementById('branch').value;
+            const yearSelect = document.getElementById('year');
+            const semesterSelect = document.getElementById('semester');
+            yearSelect.innerHTML = '';
+            semesterSelect.innerHTML = '';
+            let yearRange = [];
+            let semesterRange = [];
+            if (branch === 'IT' || branch === 'ICT' || branch === 'CE' || branch === 'CSE') {
+                yearRange = [1, 2, 3, 4];
+                semesterRange = [1, 2, 3, 4, 5, 6, 7, 8];
+            } else if (branch === 'BSC' || branch === 'BCA') {
+                yearRange = [1, 2, 3];
+                semesterRange = [1, 2, 3, 4, 5, 6];
+            }
+            yearRange.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            });
+            semesterRange.forEach(semester => {
+                const option = document.createElement('option');
+                option.value = semester;
+                option.textContent = semester;
+                semesterSelect.appendChild(option);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>SAL College Student Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="enrollment">Enrollment Number:</label>
+        <input type="text" id="enrollment" name="enrollment"><br><br>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" name="middleName" placeholder="Optional"><br><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" disabled><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"><br><br>
+        <label for="college">Select College:</label>
+        <select id="college" name="college">
+            <option value="">--Select College--</option>
+            <option value="SALITER">SALITER</option>
+            <option value="SCE">SCE</option>
+            <option value="SETI">SETI</option>
+            <option value="Diploma">Diploma</option>
+        </select><br><br>
+        <label for="branch">Select Branch:</label>
+        <select id="branch" name="branch" onchange="updateYearAndSemester()">
+            <option value="">--Select Branch--</option>
+            <option value="IT">IT</option>
+            <option value="ICT">ICT</option>
+            <option value="CE">CE</option>
+            <option value="CSE">CSE</option>
+            <option value="BSC">BSC</option>
+            <option value="BCA">BCA</option>
+        </select><br><br>
+        <label for="year">Select Year:</label>
+        <select id="year" name="year"></select><br><br>
+        <label for="semester">Select Semester:</label>
+        <select id="semester" name="semester"></select><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+        <label>
+            <input type="checkbox" id="terms" name="terms"> I accept the terms and conditions
+        </label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

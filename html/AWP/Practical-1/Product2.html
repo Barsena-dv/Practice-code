@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Ricahrd Mille</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2874f0;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .product-specification {
+            display: flex;
+            padding: 20px;
+        }
+
+        .product-images {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .main-image {
+            width: 50%;
+            height: auto;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h1 {
+            font-size: 24px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #b12704;
+        }
+
+        .description {
+            margin: 10px 0;
+        }
+
+        .specifications {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Shopket</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-specification">
+            <div class="product-images">
+                <img src="/html/AWP/Practical-1/Images/Ricahrd_Mille.webp" alt="Product Image" class="main-image">
+            </div>
+            <div class="product-info">
+                <h1>Richard Mille
+                    2018 RM 030 42mm unisex Titanium/Rubber</h1>
+                <p class="price">₹2,91,95,924.40 + Taxes</p>
+                <p class="description">Presenting to you Richard mille's
+                    Limited series watch</p>
+                <h2>Specifications</h2>
+                <ul class="specifications">
+                    <li>Brand: Ricgard mille</li>
+                    <li>Model: 2018 RM 030 42mm unisex Titanium/Rubber</li>
+                    <li>Color:  Titanium Black</li>
+                    <li>Warranty: 1 Year</li>
+                </ul>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

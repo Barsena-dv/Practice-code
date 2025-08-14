@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+header{
+    background-image: url(/pictures/mortal-kombat_edited.jpg) ;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header .inner {
+	background:url(/pictures/Mortal-Kombat-11-Ultimate-Edition-Review.webp) center 0 no-repeat;
+	padding-top: 20px;
+	max-height:200px;
+    color: azure;
+    
+}
+.address {
+	float:inline-end;
+	text-align:right;
+	padding: 50px 350px 0px 0px;
+}
+
+
+
+.wrapper {
+    width:100%; 
+    overflow:hidden;
+    color: aliceblue;
+}
+.extra-wrap {width:100%;}
+.img-wrap {overflow:hidden;}
+h1 a {
+	display:block;
+	width:10px;
+	height:10px;
+	text-indent:-5000px;
+	background:url(/pictures/mortal_kombat_11_icon_by_kiramaru_kun_dd56zo2-fullview.png) 0 0 no-repeat;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    padding: 0px 0px 0px 0px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: beige;
+    padding: 10px 80px;
+    border: 1px solid beige;
+    transform: 0.1s ease;
+}
+
+ul li a:hover{
+    background-color: bisque;
+    color: crimson;
+}
+
+ul li.active a{
+    background-color: bisque;
+    color: crimson;
+}
+
+.hen{
+    float: left;
+    padding: 0px 0px 50px 250px;
+}
+
+.den{
+    max-width: 1500px;
+}
+
+.cen{
+    padding: 0px 250px 0px 250px;
+ }
+
+.fen{
+    background-image: url(/pictures/4k-assassins-creed-valhalla-ps5-game-g6-3840x2160_edited.jpg);
+    background-size: cover;
+    padding: 20px;
+    color:darkorange;
+}
+.title{
+    position: absolute;
+    top: 58%;
+    left: 50.5%;
+    transform: translate(-50%,-50%);
+    background-image: url(/pictures/Mortal-Kombat-11-Ultimate-Edition-Review.webp);
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px white;
+    animation: slider 9s infinite linear;
+}
+
+@keyframes slider{
+    0%{ background-image: url(/pictures/mortal-kombat-2021-movies-sub-zero-scorpion-1920x1200-5265.jpg); height: 500px; width: 1120px;}
+    35%{ background-image: url(/pictures/4k-assassins-creed-valhalla-ps5-game-g6-3840x2160.jpg); height: 500px; width: 1120px;}
+    75%{ background-image: url(/pictures/697097-mortal-kombat-11-ultimate-xbox-one-front-cover.jpg); height: 500px; width: 1120px; }
+}
+.flex-container {
+    display: flex;
+}
+   
+  .flex-container > div {
+    background-image: url(/pictures/gYwV8P.jpg);
+    background-position: center;
+    
+    color:darkorange;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 500px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .xen{
+    padding: 0px 100px 0px 100px;
+  }
+
+  .clan{
+    padding: 0px 350px 0px 350px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  
+  tr:hover {
+    background-color: #777;
+    color:darkorange;
+}
+ .vin{
+    padding: 0px 550px 0px 550px;
+ }
+
+
+/***********************************************content*********************************************************/
+
+#content {width:100%; padding:16px 0 39px;}
+/***********************************************footer**********************************************************/
+
+footer {min-height:53px; padding-top:36px; background:url(../images/footer_bg.gif) 0 0 repeat-x #f3eeeb; color:#b1a7a1;}
+footer a {
+	color:#887b74;
+	display:inline-block;
+	margin-left:16px;
+	}
+
+.footer_menu {
+	overflow:hidden;
+	}
+.footer_menu li {
+	float:left;
+	margin-right:18px;
+	}	
+.footer_menu li a {
+	color:#b1a7a1;
+	text-decoration:none;
+	margin:0;
+	}	
+.footer_menu li a:hover {
+	text-decoration:underline;
+	}	
+.footer_menu li a.active {
+	color:#F30;
+	}	
+
+.list-services {overflow:hidden; padding:0px 0px 0px 0px;}
+.list-services li {float:left; padding:0 0 0 10px;}
+

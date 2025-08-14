@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --color: darkgrey;
+            --seccolor: skyblue;
+            --beccolor: orange;
+        }
+        
+        ul{
+            list-style-type: none;
+            display: flex;
+            background-color: bisque;
+        }
+
+        li:first-child{
+            background-color: var(--color);
+        }
+
+        li:nth-child(2){
+            background-color: var(--seccolor);
+        }
+
+        li:nth-child(3){
+            background-color: var(--beccolor);
+        }
+        
+        li{
+            padding: 10px;
+            border: 1px solid goldenrod;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</body>
+</html>

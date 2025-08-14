@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            max-width: 100%;
+            margin: 2%;
+            border: 2px solid black;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px 20px 0 0;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            list-style-type: none;
+            border-radius: 20px;
+            border: 1px solid black;
+            margin: 4px;
+            text-align: center;
+            padding: 8px 12px;
+            font-size: 16px;
+        }
+
+        h1,
+        p {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .box2 {
+            border-radius: 25px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            color: rgb(18, 92, 183);
+            background-color: rgba(135, 205, 233, 0.512);
+            margin: 20px auto;
+            width: fit-content;
+        }
+
+        @media (min-width: 768px) {
+            .box {
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .box {
+                max-width: 30%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="/pictures/289-2896483_rural-road-in-australia-landscape-wallpaper-australia.jpg" alt="">
+        <ul>
+            <li class="box1">Nature</li>
+            <li class="box1">Field</li>
+        </ul>
+
+        <div>
+            <h1>Lorem, ipsum.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet nesciunt consectetur cupiditate
+                porro nihil quo officiis consequuntur, minima nemo.</p>
+        </div>
+        <div class="box2">Read more</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In Form</title>
+    <script>
+        function validateSignInForm() {
+            let isValid = true;
+            const enrollment = document.getElementById('enrollment').value;
+            const enrollmentPattern = /^[a-zA-Z0-9]+$/;
+            if (!enrollmentPattern.test(enrollment)) {
+                alert('Please enter a valid alphanumeric enrollment number.');
+                isValid = false;
+            }
+            const password = document.getElementById('password').value;
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                alert('Password must be at least 8 characters long, include one uppercase letter, one lowercase letter, one number, and one special character.');
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+</head>
+<body>
+    <h2>Sign-In Form</h2>
+    <form onsubmit="return validateSignInForm()">
+        <label for="enrollment">Enrollment Number:</label>
+        <input type="text" id="enrollment" name="enrollment" placeholder="Enter your enrollment number"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+        <input type="submit" value="Sign In">
+    </form>
+</body>
+</html>

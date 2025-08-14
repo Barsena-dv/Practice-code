@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: visible;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);*/
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+ .neon{
+                border: 2px solid rgb(82,68,207);
+                padding: 10px 10px 10px 10px;
+                margin: 30px 500px 30px 500px;
+            }
+ .high{
+                border: solid rgba(57,187,180,0.938);
+                padding: 2px 1px 2px 1px;
+                margin: 2xp 1px 2px 1px;
+                color: darkred;
+                font-family: cursive;
+            }
+ .city{
+                background-color: rgb(253,83,16);
+                color: darkslategray;
+                border: 2px solid rgb(253,229,149);
+                margin: 5px;
+                padding: 70px 20px 70px 20px;   
+                font-size: large;
+            }
+  .note{
+                font-size: 120%;
+                color: midnightblue;
+                text-align: center;
+            }
+  .den{
+                background-color: darkorange;
+            }
+</style>
+</head>
+<body>
+
+<h2>Opacity with Box</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+  <img src="/289-2896483_rural-road-in-australia-landscape-wallpaper-australia.jpg" alt="Avatar" class="image" >
+  <div class="middle">
+   <div class="neon">
+            <div class="city">
+                <h3><span class="note"><center>The cottage Garde</center></span></h3>
+            </div>
+            <div class="city">
+                <p>The <span class="high">cottage</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, perspiciatis.</p>
+            </div>
+            <div class="city">
+                <p>the <span class="high">cottage</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti error eum ut iste pariatur consequuntur recusandae fugiat impedit. Totam, in.</p>
+            </div>
+            <div class="city">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quas voluptates, impedit voluptatum ab beatae ipsa explicabo at molestias ducimus suscipit quod? Repellendus, provident reprehenderit. Inventore et quasi nostrum maiores!
+            </div>
+        </div>
+  </div>
+</div>
+  
+</body>
+</html>

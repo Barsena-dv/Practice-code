@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Expressions & Two-Way Data Binding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="MyController">
+    <h1>AngularJS Expressions & Two-Way Data Binding</h1>
+    <h2>Expressions Example</h2>
+    <p>2 + 3 = {{ 2 + 3 }}</p>
+    <p>Multiplication: 5 × 4 = {{ 5 * 4 }}</p>
+    <p>Message from Controller: {{ message }}</p>
+    <h2>Two-Way Data Binding</h2>
+    <p>Enter your name: <input type="text" ng-model="userName"></p>
+    <p>Hello, <strong>{{ userName }}</strong>!</p>
+    <script>         var app = angular.module('myApp', []);
+        app.controller('MyController', function ($scope) {
+            $scope.message = "Welcome to AngularJS Expressions!";
+            $scope.userName = "Dhruv";
+        }); 
+    </script>
+</body>
+
+</html>

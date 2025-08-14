@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <title>AngularJS Directives Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+        </script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .box {
+                border: 1px solid #333;
+                padding: 10px;
+                margin: 10px;
+                display: inline-block;
+            }
+        </style>
+</head>
+
+<body ng-app="myApp" ng-controller="MainController">
+    <h1>AngularJS Directives Demo</h1>
+    <div class="box">
+        <h2>ng-model (Two-way Binding)</h2>
+        <input type="text" ng-model="username" placeholder="Enter your name">
+        <p>Hello, <strong>{{ username }}</strong>!</p>
+    </div>
+    <div class="box">
+        <h2>ng-repeat (Looping)</h2>
+        <ul>
+            <li ng-repeat="fruit in fruits">{{ fruit }}</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>ng-if (Conditional Rendering)</h2>
+        <button ng-click="showMessage = !showMessage">Toggle Message</button>
+        <p ng-if="showMessage">This is a conditional message using ng-if!</p>
+    </div>
+    <div class="box">
+        <h2>ng-click (Event Handling)</h2>
+        <button ng-click="increaseCount()">Click Me</button>
+        <p>Button clicked <strong>{{ count }}</strong> times.</p>
+    </div>
+    <script>         var app = angular.module('myApp', []); app.controller('MainController', function ($scope) {
+            $scope.username = "";
+            $scope.fruits = ["Apple", "Banana", "Cherry", "Mango"];
+            $scope.showMessage = false;
+            $scope.count = 0;
+            $scope.increaseCount = function () {
+                $scope.count += 1;
+            };
+        }); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>URL Validation</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body style=“background-color:gray;”>
+    <center>
+        <h3> URLValidator</h3>
+        <input type="text" id="urlInput" placeholder="Enter a URL">
+        <button onclick= "checkURL" >Check URL</button>
+            <p id="result"></p>
+    </center>
+    <script> function isValidURL(url){
+        }
+        function checkURL() {
+            const inputURL = document.getElementById('urlInput').value; const resultElement = document.getElementById('result');
+            if (isValidURL(inputURL)) {
+                resultElement.innerText = "Valid URL";
+            } else { resultElement.innerText = "Invalid URL"; }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A form for a personal biodata</title>
+</head>
+
+<body>
+    <div>
+        <caption>
+            <h3>Biodata Form</h3>
+        </caption>
+    </div>
+    <div>
+        <form action="post">
+            <div>
+                <label for="name">Enter your name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name..." />
+            </div>
+            <div>
+                <label for="dob"> Enter your date of birth </label>
+                <input type="date" id="dob" value="dob" placeholder="enter your date of birth..." />
+            </div>
+            <div>
+                <input type="radio" id="male" name="gendre" value="male" />
+                <label for="male">male</label>
+                <input type="radio" id="female" name="gendre" value="female" />
+                <label for="female">male</label>
+            </div>
+            <div>
+                <textarea name="address" id="address" placeholder="Enter your address" cols="30" rows="10"></textarea>
+                <div>
+                    <select name="city" id="city">
+                        <option value="Ahemedabad">Ahemedabad</option>
+                        <option value="Kutch">Kutch</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Surat">Surat</option>
+                    </select>
+                    <input type="text" id="pincode" name="pincode" placeholder="enter your pincode...">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
