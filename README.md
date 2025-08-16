@@ -5,6 +5,8 @@ It is organized into separate folders for each language/technology, making it ea
 
 ## 📂 Folder Structure
 
+```
+
 Practice-code/
 ├── C program/ # C basic program 
 ├── HTML/ # HTML, CSS, and basic web projects
@@ -13,6 +15,9 @@ Practice-code/
 ├── Prolog/ # Prolog small programs for the college practicals
 ├── Java/ # Java exercises and mini projects
 └── ...more coming soon
+
+````
+---
 
 ## 🚀 Purpose
 The goal of this repository is to:
