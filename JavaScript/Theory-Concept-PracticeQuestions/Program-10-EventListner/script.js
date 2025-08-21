@@ -41,7 +41,19 @@ let abcd = document.querySelector("#abcd");
 //     abcd.style.backgroundColor = "red";
 // });
 
-window.addEventListener("mousemove",(data) => {
-    abcd.style.top = data.clientY + "px";
-    abcd.style.left = data.clientX + "px";
-});
+// window.addEventListener("mousemove",(data) => {
+//     abcd.style.top = data.clientY + "px";
+//     abcd.style.left = data.clientX + "px";
+// });
+
+
+//Event Bubbling
+
+//When there is an event and there is not a listner on that then the event will search for the listnere on the parent if it will not even there then it will search its parent just like that it will go upwards for that until it will get the listner to operate that is called Event Bubbling
+
+//Event Capturing
+
+//Whenever you do a event or clicking that event will always go in the two flows
+//Phase 1(capture):Event will go down from top level element.
+//Phase 2(bubble):Event will go toward the parenty element.
+//And phase 1 always occurs 1st but it always remains Off by default if we toggle On it then the phase 1 will occur
