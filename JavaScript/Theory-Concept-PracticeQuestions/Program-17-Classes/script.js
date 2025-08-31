@@ -57,3 +57,15 @@ class Admin extends User{
 let u1 = new User("Dhruv", "Ahmedabad", "123gando","abc@gmail.com");
 let u2 = new User("Heli", "Delhi", "465hesi","bcd@gmail.com");
 let a1 = new Admin("admin1", "India", "admin","b@gmail.com");
+
+//Inheritances
+let coffee = {
+    color: "brown",
+    drink: function(){
+        console.log("gut gut gut")
+    },
+};
+
+let arabiataCoffee = Object.create(coffee);
+arabiataCoffee.taste = "bitter";
+arabiataCoffee.drink();
