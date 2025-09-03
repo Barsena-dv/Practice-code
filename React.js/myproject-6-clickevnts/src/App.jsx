@@ -5,8 +5,6 @@ function App() {
   return (
     <>
       <Profilepicure />
-      <Button />
-
     </>
   )
 }
