@@ -14,6 +14,7 @@ Practice-code/
 ├── Python/ # Python scripts and small projects
 ├── Prolog/ # Prolog small programs for the college practicals
 ├── Java/ # Java exercises and mini projects
+├── JavaScript/ # JavaScript exercises and mini projects
 └── ...more coming soon
 
 ````
