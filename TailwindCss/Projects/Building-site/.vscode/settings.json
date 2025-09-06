@@ -1,0 +1,207 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "editor.linkedEditing": true,
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#00FF0010"
+        },
+        {
+            "column": 100,
+            "color": "#BDB76B15"
+        },
+        {
+            "column": 120,
+            "color": "#FA807219"
+        }
+    ],
+    "editor.unicodeHighlight.includeComments": true,
+    "emmet.variables": {
+        "lang": "en"
+    },
+    "workbench.colorCustomizations": {
+        "[Default Dark Modern]": {
+            "tab.activeBorderTop": "#00FF00",
+            "tab.unfocusedActiveBorderTop": "#00FF0088",
+            "textCodeBlock.background": "#00000055"
+        },
+        "editor.wordHighlightStrongBorder": "#FF6347",
+        "editor.wordHighlightBorder": "#FFD700",
+        "editor.selectionHighlightBorder": "#A9A9A9"
+    },
+    "workbench.editor.revealIfOpen": true,
+    "workbench.tree.indent": 20,
+    "files.eol": "\n",
+    "[bat]": {
+        "files.eol": "\r\n"
+    },
+    "terminal.integrated.tabs.hideCondition": "never",
+    "terminal.integrated.enablePersistentSessions": false,
+    "java.configuration.detectJdksAtStart": false,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.debug.settings.hotCodeReplace": "auto",
+    "java.sources.organizeImports.staticStarThreshold": 1,
+    "cSpell.diagnosticLevel": "Hint",
+    "trailing-spaces.includeEmptyLines": false,
+    "maven.executable.path": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\maven\\latest\\bin\\mvn",
+    "trailing-spaces.backgroundColor": "rgba(255,0,0,0.1)",
+    "java.import.gradle.home": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\gradle\\latest",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\8"
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\11"
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\17"
+        },
+        {
+            "name": "JavaSE-21",
+            "path": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21",
+            "default": true
+        },
+        {
+            "name": "JavaSE-22",
+            "path": "C:\\Program Files\\Java\\jdk-22"
+        },
+        {
+            "name": "JavaSE-24",
+            "path": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\latest"
+        }
+    ],
+    "terminal.integrated.profiles.windows": {
+        "JavaSE-1.8 LTS": {
+            "overrideName": true,
+            "env": {
+                "PATH": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\8\\bin;${env:PATH}",
+                "JAVA_HOME": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\8"
+            },
+            "path": "cmd"
+        },
+        "JavaSE-11 LTS": {
+            "overrideName": true,
+            "env": {
+                "PATH": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\11\\bin;${env:PATH}",
+                "JAVA_HOME": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\11"
+            },
+            "path": "cmd"
+        },
+        "JavaSE-17 LTS": {
+            "overrideName": true,
+            "env": {
+                "PATH": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\17\\bin;${env:PATH}",
+                "JAVA_HOME": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\17"
+            },
+            "path": "cmd"
+        },
+        "JavaSE-21 LTS": {
+            "overrideName": true,
+            "env": {
+                "PATH": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21\\bin;${env:PATH}",
+                "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8",
+                "JAVA_HOME": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21"
+            },
+            "path": "cmd",
+            "args": [
+                "/k",
+                "chcp",
+                "65001"
+            ]
+        },
+        "JavaSE-22": {
+            "overrideName": true,
+            "env": {
+                "PATH": "C:\\Program Files\\Java\\jdk-22\\bin;${env:PATH}",
+                "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8",
+                "JAVA_HOME": "C:\\Program Files\\Java\\jdk-22"
+            },
+            "path": "cmd",
+            "args": [
+                "/k",
+                "chcp",
+                "65001"
+            ]
+        },
+        "JavaSE-24": {
+            "overrideName": true,
+            "env": {
+                "PATH": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\latest\\bin;${env:PATH}",
+                "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8",
+                "JAVA_HOME": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\latest"
+            },
+            "path": "cmd",
+            "args": [
+                "/k",
+                "chcp",
+                "65001"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "JavaSE-21 LTS",
+    "terminal.integrated.automationProfile.windows": {
+        "path": "cmd"
+    },
+    "terminal.integrated.env.windows": {
+        "JAVA_HOME": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21",
+        "PATH": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21\\bin;${env:PATH}"
+    },
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21"
+        }
+    ],
+    "java.import.gradle.java.home": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21",
+    "rsp-ui.rsp.java.home": "C:\\Users\\dhruv\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21",
+    "java.test.config": {
+        "vmArgs": [
+            "-Dstdout.encoding=UTF-8",
+            "-Dstderr.encoding=UTF-8"
+        ]
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "java.maxConcurrentBuilds": 4,
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "files.autoSave": "afterDelay",
+    "editor.mouseWheelZoom": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "python.createEnvironment.trigger": "off",
+    "explorer.confirmDelete": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "git.enableSmartCommit": true,
+    "rapidapi.terminalLink.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "git.autofetch": true,
+        "tailwind-fold.autoFold": false,
+        "postcss.lint.unknownAtRules": "ignore",
+    "css.lint.unknownAtRules": "ignore",
+"json.schemas": [
+
+
+        
+    ],
+    "workbench.iconTheme": "icons",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)"
+}
