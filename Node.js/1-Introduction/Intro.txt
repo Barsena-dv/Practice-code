@@ -1,0 +1,4 @@
+Ryan Dhal created the node.js using the google chrome's v8 enngine because he wanted to create the backend with the javascript.Before the backend was not possible with the javascript as js didn't had those functionalities.
+So what Ryan Dhal did is that he created a warpper around the V8 engine of the chrome which what basically does is when we write the code in the js it passes to the js layer around the V8 of chrome after converting it in the cpp modules.
+And this all makes a creates a server environment and this whole thing is called node js.
+So the node.js is basically a javascript runtime environment.
